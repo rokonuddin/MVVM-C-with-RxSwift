@@ -12,18 +12,21 @@ import SafariServices
 
 class RepositoryListCoordinator: BaseCoordinator<Void> {
 
+    private let tabBarController: UITabBarController
     private let window: UIWindow
-
     init(window: UIWindow) {
+        //swiftlint:disable force_cast
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        self.tabBarController = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         self.window = window
     }
 
     override func start() -> Observable<Void> {
         let viewModel = RepositoryListViewModel(initialLanguage: "Swift")
-        let viewController = RepositoryListViewController.initFromStoryboard(name: "Main")
+        var viewController = RepositoryListViewController.initFromStoryboard(name: "Main")
         let navigationController = UINavigationController(rootViewController: viewController)
 
-        viewController.viewModel = viewModel
+        viewController.bindViewModel(to: viewModel)
 
         viewModel.showRepository
             .subscribe(onNext: { [weak self] in self?.showRepository(by: $0, in: navigationController) })
@@ -38,8 +41,8 @@ class RepositoryListCoordinator: BaseCoordinator<Void> {
             .map { $0! }
             .bind(to: viewModel.setCurrentLanguage)
             .disposed(by: disposeBag)
-
-        window.rootViewController = navigationController
+        tabBarController.viewControllers = [navigationController]
+        window.rootViewController = tabBarController
         window.makeKeyAndVisible()
 
         return Observable.never()

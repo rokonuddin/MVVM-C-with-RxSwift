@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AB7B10F1F4C4556006F991C /* FavoriteRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB7B10E1F4C4556006F991C /* FavoriteRepositoryViewController.swift */; };
+		3AB7B1111F4C459A006F991C /* FavoriteRepositoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB7B1101F4C459A006F991C /* FavoriteRepositoryCoordinator.swift */; };
+		3AB7B1131F4C47A6006F991C /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB7B1121F4C47A6006F991C /* BindableType.swift */; };
 		8E1767C51F16726A0010DD4A /* LanguageListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1767C41F16726A0010DD4A /* LanguageListViewModelTests.swift */; };
 		8E1767C71F1749190010DD4A /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1767C61F1749190010DD4A /* RepositoryTests.swift */; };
 		8E2045931F164F7E00954E38 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2045911F164F7E00954E38 /* RepositoryListViewModel.swift */; };
@@ -62,6 +65,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3AB7B10E1F4C4556006F991C /* FavoriteRepositoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteRepositoryViewController.swift; path = FavoriteRepositoryViewController/FavoriteRepositoryViewController.swift; sourceTree = "<group>"; };
+		3AB7B1101F4C459A006F991C /* FavoriteRepositoryCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteRepositoryCoordinator.swift; path = FavoriteRepositoryViewController/FavoriteRepositoryCoordinator.swift; sourceTree = "<group>"; };
+		3AB7B1121F4C47A6006F991C /* BindableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		8E1767C41F16726A0010DD4A /* LanguageListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListViewModelTests.swift; sourceTree = "<group>"; };
 		8E1767C61F1749190010DD4A /* RepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		8E2045911F164F7E00954E38 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
@@ -112,9 +118,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AB7B10D1F4C4515006F991C /* FavoriteRepository */ = {
+			isa = PBXGroup;
+			children = (
+				3AB7B10E1F4C4556006F991C /* FavoriteRepositoryViewController.swift */,
+				3AB7B1101F4C459A006F991C /* FavoriteRepositoryCoordinator.swift */,
+			);
+			name = FavoriteRepository;
+			sourceTree = "<group>";
+		};
 		8E2A2F7C1F17B2DC005C5FE7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				3AB7B1121F4C47A6006F991C /* BindableType.swift */,
 				8E2A2F7D1F17B2DC005C5FE7 /* BaseCoordinator.swift */,
 				8E2A2F7F1F17B2FE005C5FE7 /* StoryboardInitializable.swift */,
 			);
@@ -178,6 +194,7 @@
 		8EB5F96E1F14D91100E46882 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3AB7B10D1F4C4515006F991C /* FavoriteRepository */,
 				8EB5F9731F14D91100E46882 /* RepositoryList */,
 				8EB5F96F1F14D91100E46882 /* Languages */,
 			);
@@ -372,6 +389,7 @@
 			files = (
 				8E2045941F164F7E00954E38 /* RepositoryViewModel.swift in Sources */,
 				8E2A2F7B1F17B2C1005C5FE7 /* LanguageListCoordinator.swift in Sources */,
+				3AB7B1111F4C459A006F991C /* FavoriteRepositoryCoordinator.swift in Sources */,
 				8EB5F9891F14D91100E46882 /* RepositoryListViewController.swift in Sources */,
 				8E2A2F791F17B2B0005C5FE7 /* RepositoryListCoordinator.swift in Sources */,
 				8E2A2F801F17B2FE005C5FE7 /* StoryboardInitializable.swift in Sources */,
@@ -382,8 +400,10 @@
 				8E2A2F7E1F17B2DC005C5FE7 /* BaseCoordinator.swift in Sources */,
 				8EB5F9831F14D91100E46882 /* AppDelegate.swift in Sources */,
 				8EB5F9871F14D91100E46882 /* RepositoryCell.swift in Sources */,
+				3AB7B1131F4C47A6006F991C /* BindableType.swift in Sources */,
 				8EB5F98D1F14D91100E46882 /* Repository.swift in Sources */,
 				8E2045931F164F7E00954E38 /* RepositoryListViewModel.swift in Sources */,
+				3AB7B10F1F4C4556006F991C /* FavoriteRepositoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
